@@ -9,7 +9,7 @@ import androidx.viewpager2.widget.ViewPager2
 /**
  * The number of pages (wizard steps) to show in this demo.
  */
-private const val NUM_PAGES = 5
+private const val NUM_PAGES = 3
 
 class ScreenSlidePagerActivity : FragmentActivity() {
 
@@ -51,6 +51,13 @@ class ScreenSlidePagerActivity : FragmentActivity() {
     private inner class ScreenSlidePagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
         override fun getItemCount(): Int = NUM_PAGES
 
-        override fun createFragment(position: Int): Fragment = ScreenSlidePageFragment()
+        override fun createFragment(position: Int): Fragment {
+            return when (position) {
+                0 -> ScreenSlidePageFragment()
+                1 -> ScreenSlidePageFragment2()
+                2 -> ScreenSlidePageFragment3()
+                else -> ScreenSlidePageFragment()
+            }
+        }
     }
 }
