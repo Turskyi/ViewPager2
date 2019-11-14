@@ -45,9 +45,8 @@ class ScreenSlidePagerActivity : FragmentActivity() {
     }
 
     /**
-     * A simple pager adapter that represents 5 com.turskyi.viewpager2.ScreenSlidePageFragment
-     * objects, in
-     * sequence.
+     * A simple pager adapter that represents com.turskyi.viewpager2.ScreenSlidePageFragment
+     * objects, in sequence.
      */
     private inner class ScreenSlidePagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
         override fun getItemCount(): Int = NUM_PAGES
